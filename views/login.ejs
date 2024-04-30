@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#"><img src = "logowhite.png" class="logo"></a>
+        <nav class="navigation">
+            <a href="/home">Home</a>
+            <a href="/aboutus">About</a>
+            <a href="/contact">Contact</a>
+            <button class="login-popup">Login</button>
+        </nav>
+    </header>
+
+    <div class="wrapper">
+        <span class="icon-close"><ion-icon name="close"></ion-icon>
+        </span>
+
+        <div class="form-box-login">
+            <h2>Login</h2>
+            <form action="/login" id="loginForm" method="post">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required id="email" name="email">
+                    <label class="l1" for="email">Email</label>  
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required id="password" name="password">
+                    <label class="l1" for="password">Password</label>  </div>
+                <div class="remember-forget">
+                <label><input type ="checkbox">Remember me</label>
+                <a href="/forgot">Forget Password?</a>
+                </div><br>
+                <button type="submit" class="btn">Login</button>
+                
+                <div class="login-register">
+                    <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                </div>
+            </form>
+        </div>
+
+
+        <div class="form-box-register">
+            <h2 class="l1">Registration</h2>
+            <form action="/signup" id="RegisterForm"  method="post">
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="person"></ion-icon></span>
+                    <input type="text" required minlength="4" id="username" name="username">
+                    <label class="l1">Username</label>  
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="mail"></ion-icon></span>
+                    <input type="email" required id="email_r" name="email_r">
+                    <label class="l1">Email</label>  
+                </div>
+                <div class="input-box">
+                    <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+                    <input type="password" required id="password_r" name="password_r">
+                    <label class="l1" >Password</label> </div>
+                <div class="remember-forget">
+                <label><input type ="checkbox" required>I agree to terms & conditions</label>
+                
+                </div>
+                <button type="submit" class="btn">Register</button>
+                <script></script>
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+       
+const wrapper = document.querySelector('.wrapper');
+const loginLink = document.querySelector('.login-link');
+const registerLink = document.querySelector('.register-link');
+const btnPopup = document.querySelector('.login-popup');
+const iconClose = document.querySelector('.icon-close');
+
+document.addEventListener('DOMContentLoaded', () => {
+    btnPopup.click();
+});
+
+registerLink.addEventListener('click', () => {
+    wrapper.classList.add('active');
+});
+
+loginLink.addEventListener('click', () => {
+    wrapper.classList.remove('active');
+});
+
+btnPopup.addEventListener('click', () => {
+    wrapper.classList.add('active-popup');
+});
+
+iconClose.addEventListener('click', () => {
+    wrapper.classList.remove('active-popup');
+});
+//here
+const showErrorAlert = (errorMessage) => {
+            if (errorMessage) {
+                alert(errorMessage);
+            }
+        };
+        window.addEventListener('DOMContentLoaded', () => {
+            // Check if an error message is present in the response
+            const errorMessage = '<%= locals.errorMessage %>'; // Replace with the actual variable holding the error message
+            showErrorAlert(errorMessage);
+        });
+            //tillhere
+
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

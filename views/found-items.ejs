@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <title>found Items</title>
+    <link rel="stylesheet" href="found-items.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="logowhite.png" alt="Logo"></a>
+        <nav class="navigation">
+            <a href="/home2">Home</a>
+            <a href="/aboutus2">About Us</a>
+            <a href="/contact2">Contact</a>
+        </nav>
+    </header>
+<div class="container">
+    <h1>FOUND ITEMS</h1>
+
+    
+    <% foundItems.forEach((foundItem) => { %>
+        <div class="lost-item">
+            <h2><img src="/uploads/<%= foundItem.image %>" width="100px">
+            <h2><%= foundItem.object %></h2>
+            <p>Found Date: <%= foundItem.foundDate %></p>
+            <p>Description: <%= foundItem.description %></p>
+            <p>Contact: <%= foundItem.contact %></p>
+        </div>
+    <% }) %>
+
+
+    <a href="/found" class="add-item-link">Add New Found Item</a>
+</div>
+
+<script>
+
+
+</script>
+
+
+</body>
+</html>

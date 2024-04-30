@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="found-items.css">
+    <title>Lost Items</title>
+   </head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="logowhite.png" alt="Logo"></a>
+        <nav class="navigation">
+            <a href="/home2">Home</a>
+            <a href="/aboutus2">About Us</a>
+            <a href="/contact2">Contact</a>
+        </nav>
+    </header>
+<div class="container">
+    <h1>LOST ITEMS</h1>
+
+    <% lostItems.forEach((lostItem) => { %>
+        <div class="lost-item">
+            <h2><img src="/uploads/<%= lostItem.image %>" width="100px">
+            </h2>
+            <h2><%= lostItem.object %></h2>
+            <p>Description: <%= lostItem.description %></p>
+            <p>Lost Date: <%= lostItem.lostDate %></p>
+            <p>Contact: <%= lostItem.contact %></p>
+            <p>Rewards: <%= lostItem.reward %></p>
+
+            <!-- Display images for each lost item -->
+        </div>
+    <% }) %>
+
+    <a href="/lost" class="add-item-link">Add New Lost Item</a>
+</div>
+</body>
+</html>

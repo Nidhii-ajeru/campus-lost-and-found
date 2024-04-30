@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us page</title>
+    <link rel="stylesheet" href="contact.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-OUdF8gs3zI7Idt3lF2VM9DEuLukOuoDObA22Z2fM6uKSN2AzQfxj73mlmGUgNdR8DTmPfvDsuXfZL7Y3Ytuz4A==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="main">
+        <header>
+            <a href="#" class="logo"><img src="logowhite.png" alt="Logo"></a>
+            <nav class="navigation">
+                <a href="/home2">Home</a>
+                <a href="/aboutus2">About</a>
+                <a href="/rules">Item List</a>
+            </nav>
+        </header>
+        <div class="main1" id="main1">
+            <div class="wrapper">
+                <div class="box">
+                    <h1 class="heading">Helpline</h1>
+                    <span class="box-content">
+                        <p class="email"><ion-icon name="mail"class="icone"></ion-icon> Email:<span class="text">lost&found@gmail.com</span></p>
+                        <p class="whatsapp"><ion-icon name="logo-whatsapp" class="iconw"></ion-icon>Whatsapp:<span class="text">&nbsp;9964496603</span></p>
+                        <p class="phone"><ion-icon name="call" class="iconp"></ion-icon>Number 1:<span class="text">&nbsp;9743275375</span></p>
+                        <p class="phone"><ion-icon name="call" class="iconp"></ion-icon>Number 2:<span class="text">&nbsp;9448510358</span></p>
+                        <p class="time"><ion-icon name="alarm" class="icontime"></ion-icon>Timings:<span class="text">&nbsp;9am to 6pm</span></p>
+                    </span>
+        </div>
+        </div>
+            </div>
+        
+        </div>
+        <div class="contact-section">
+            <div class="blurred-box">
+                <h2>Contact Us</h2>
+                <p>Email: nithinpatil@gmail.com</p>
+                <p>Follow us on social media:</p>
+                <p>
+                    <a href="https://www.facebook.com/" target="_blank" ><span class="iconf"><ion-icon name="logo-facebook"></ion-icon></span></a> |
+                    <a href="https://twitter.com/?lang=en" target="_blank" ><span class="icont"><ion-icon name="logo-twitter"></ion-icon></span></a> |
+                    <a href="https://www.instagram.com/nithin_ox/" target="_blank" ><span class="iconi"><ion-icon name="logo-instagram"></ion-icon></span></a>
+                </p>
+            </div>
+        </div>
+    
+        <footer>
+            <p>&copy; 2024 BMSCE . All rights reserved.</p>
+        </footer>
+        <script>
+            document.addEventListener('mousemove', function(e) {
+                const main = document.getElementById('main1');
+                const xPos = (e.clientX / window.innerWidth - 0.5) * 20;
+                const yPos = (e.clientY / window.innerHeight - 0.5) * 20;
+                main.style.backgroundPosition = `${50 + xPos}% ${50 + yPos}%`;
+            });
+        </script>
+        
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="aboutus.js"></script>
+</body>
+</html>

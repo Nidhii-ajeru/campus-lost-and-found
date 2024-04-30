@@ -1,0 +1,282 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('bg7.jpg') center/cover no-repeat;
+    background-attachment:   fixed;
+}
+
+
+
+.container {
+    display: inline-block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(60, 6, 66, 0.333);
+    backdrop-filter: blur(20px);
+    background: transparent;
+    width: 50%;
+    height: 50%; /* Adjust the height to match the width */
+    text-align: left;
+    margin-left: auto; /* Center the box horizontally */
+    margin-right: auto;
+}
+
+form {
+    display: block;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input,
+textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+textarea {
+    height: 100px;
+}
+
+.file-container {
+    
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-left: auto; /* Center the box horizontally */
+    margin-right: auto;
+}
+
+.file-input {
+    display: none;
+    
+}
+
+.file-label {
+    background-color: #a1a0ab67;
+    display: inline-block;
+    padding: 10px;
+    border: 4px dashed #343030d3;
+    height: 110px;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;  /* Hide overflowing content */
+    white-space: nowrap;  /* Prevent wrapping */
+    text-overflow: ellipsis;  /* Display ellipsis (...) for overflow */
+}
+
+.file-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.submit {
+    display: block;
+    margin: 0 auto;
+    background-color: #534caf;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center;
+}
+
+.submit:hover {
+    background-color: #45a049;
+}
+
+label{
+    color: #fff;
+
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-15px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+.lab1,
+.lab,
+.lab3 {
+    animation: slideInLeft 0.8s ease;
+}
+
+input,
+textarea {
+    animation: slideInRight 0.8s ease;
+}
+
+.submit {
+    display: block;
+    margin: 0 auto;
+    background-color: #000000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    align-self: center;
+    transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+    background-color: #ffffff;
+    color:#000000;
+    transition: 0.3s ease;
+}
+body{
+    background: url("forgot.jpg") no-repeat;
+    background-size:cover;
+    background-position: center;
+    z-index:-1;
+}
+.image-count,
+.error-message {
+    color: #fff;
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+*{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'poppins',sans-serif;
+}
+h1 {
+   position: relative;
+   display: inline-block;
+   text-align: center;
+   margin-left:37vh;
+   color: #fff;
+   transition: transform 0.3s ease-in-out;
+}
+
+h1:hover {
+   transform: rotate(-5deg);
+   cursor: pointer;
+}
+
+.file-container {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 15px;
+   position: relative;
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   animation: fadeInDown 0.8s ease;
+}
+
+.file-input {
+   display: none;
+}
+label{
+   color:#ffffff;
+}
+
+.file-label {
+   align-self: center;
+   background-color: #a1a0ab67;
+   display: inline-block;
+   padding: 10px;
+   border: 4px dashed #343030d3;
+   height: 30vh;
+   width: 20vw;
+   border-radius: 10px;
+   cursor: pointer;
+   text-align: center;
+   padding-top: 45px;
+   margin-left: auto;
+   margin-right: auto;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   transition: background-color 0.3s ease;
+}
+
+.file-label:hover {
+   background-color: #b7b6c0;
+}
+
+.file-icon {
+   font-size: 24px;
+   margin-right: 10px;
+   animation: bounce 0.5s ease infinite;
+}

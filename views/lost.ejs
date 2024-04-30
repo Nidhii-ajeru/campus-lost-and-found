@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lost</title>
+    <link href="found.css" type="text/css" rel="stylesheet">
+    <script src="validate.js" defer></script>
+   
+</head>
+<body>
+
+<div class="container">
+    <h1>LOST</h1>
+    <form id="lostForm" onsubmit="return validateForm()" action="/lost-items" method="post" enctype="multipart/form-data">
+        <div class="file-container">
+            <input type="file" id="image" name="image" class="file-input" onchange="updateFileName()" >
+            <label for="image" class="file-label">
+                <span class="file-icon">&#128247;</span><br>
+                <span id="fileName">Upload Images</span>
+            </label>
+        </div><br>
+        <label class="lab1">Object:</label>
+        <input type="text" id="obj" name="object" required><br><br>
+
+        <label class="lab">Lost Date:</label>
+        <input type="date" id="date" name="lostDate" onchange="validateDate()" required><br><br>
+
+        <label class="lab3">Description:</label>
+        <textarea id="Description" name="description" required></textarea><br><br>
+
+        <label class="lab3">Contact No. and Name:<span class="file-icon">&#128383;</span></label>
+        <input type="text" id="Contact" name="contact" minlength="10" maxlength="100"  required><br><br>
+
+        <label class="lab3">Reward(optional)<span class="file-icon">&#128383;</span></label>
+        <input type="text" id="Reward" name="reward" maxlength="100"><br><br>
+
+        <button type="submit" class="submit">SUBMIT</button>
+        <div id="imageCount" class="image-count"></div>
+        <div id="errorMessage" class="error-message"></div>
+    </form>
+</div>
+<script>
+
+function clearErrorMessage() {
+    document.getElementById("errorMessage").textContent = "";
+}
+
+function validateForm() {
+    clearErrorMessage();
+    
+    // Validate image
+    const imageInput = document.getElementById('image');
+    const imageCount = imageInput.files.length;
+    if (imageCount === 0) {
+        document.getElementById("errorMessage").textContent = "Please upload at least one image.";
+        return false;
+    }
+
+    // Validate date
+    const selectedDate = new Date(document.getElementById('date').value);
+    const currentDate = new Date();
+    if (selectedDate > currentDate) {
+        document.getElementById("errorMessage").textContent = "Lost date cannot be in the future.";
+        return false;
+    }
+
+    // Additional code for file type validation
+    const allowedFileTypes = ['image/jpeg', 'image/png'];
+    const files = imageInput.files;
+
+    for (const file of files) {
+        if (!allowedFileTypes.includes(file.type)) {
+            document.getElementById("errorMessage").textContent = "Only JPG and PNG files are allowed.";
+            return false;
+        }
+    }
+
+    return true;
+}
+
+function updateFileName() {
+    const files = document.getElementById('image').files;
+    const fileNameDisplay = document.getElementById('fileName');
+    const imageCountDisplay = document.getElementById('imageCount');
+    
+    if (files.length > 0) {
+        fileNameDisplay.textContent = files[0].name;
+        imageCountDisplay.textContent = `Number of Images: ${files.length}`;
+    } else {
+        fileNameDisplay.textContent = "Upload Images";
+        imageCountDisplay.textContent = "";
+    }
+}
+
+document.getElementById('image').addEventListener('change', function () {
+    const allowedFileTypes = ['image/jpeg', 'image/png'];
+    const files = this.files;
+
+    for (const file of files) {
+        if (!allowedFileTypes.includes(file.type)) {
+            document.getElementById("errorMessage").textContent = "Only JPG and PNG files are allowed.";
+            this.value = ""; // Clear the file input
+            updateFileName(); // Reset file name display
+            return;
+        }
+    }
+
+    updateFileName();
+});
+</script>
+
+
+
+
+
+</body>
+</html>

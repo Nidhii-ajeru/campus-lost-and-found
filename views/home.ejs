@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="homepage.css" type="text/css"/>
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><img src="logowhite.png" alt="Logo"></a>
+      <nav class="navigation">
+          <a href="#" onclick="scrollToTarget()">Home</a>
+          <a href="/aboutus">About Us</a>
+          <a href="/contact">Contact</a>
+      </nav>
+  </header>
+                <div class="wrapper">
+                  <div class="parallax__group hero-container">
+                    <div class="parallax__layer top-left"></div>
+                    <div class="parallax__layer top-right"></div>
+                    <div class="parallax__layer bottom-right"></div>
+                    <div class="parallax__layer rest-of-page"></div>
+                   
+        </div>
+        <div class="parallax__group info-container" id="scrollTarget">
+            <img src="home_lost.jpg" alt="Lost and found" />
+            <div class="text-container" >
+              <h2>Welcome to Campus Lost and Found!</h2><br>
+              <p><b>Lost something? Find it here…</b><br>
+                Explore our online hub for lost items and people. Campus Lost and Found's global platform simplifies the process of finding whatever you've lost on campus. Let's reunite you with your belongings!</p>
+                <p><b>Found something? Report it here…</b><br>
+                    If you've come across an item that doesn't belong to you, be a hero and report it.<br>
+                     Your honesty could help someone reclaim their lost possessions. Together, let's make sure every item finds its way back home.</p>
+              <br><br><a href="/login" class="btn">Get Started Now</a>
+            </div>
+      </div>
+      <div class="contact-section">
+        <div class="blurred-box">
+            <h2>Contact Us</h2>
+            <p>Email: lostandfound@gmail.com</p>
+            <p>Follow us on social media:</p>
+            <p>
+                <a href="https://www.facebook.com/" target="_blank" ><span class="iconf"><ion-icon name="logo-facebook"></ion-icon></span></a> 
+                <a href="https://twitter.com/?lang=en" target="_blank" ><span class="icont"><ion-icon name="logo-twitter"></ion-icon></span></a> 
+                <a href="https://www.instagram.com/" target="_blank" ><span class="iconi"><ion-icon name="logo-instagram"></ion-icon></span></a>
+            </p>
+        </div>
+    </div>
+  
+    <footer>
+        <p>&copy; 2024 BMSCE . All rights reserved.</p>
+    </footer>
+     
+      </div>
+    </div>
+    
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script>
+    function scrollToTarget() {
+      var element = document.getElementById('scrollTarget');
+      element.scrollIntoView({ behavior: 'smooth' });
+    }</script>
+    
+  </body>
+</html>

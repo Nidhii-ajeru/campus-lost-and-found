@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+        *{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: "rules.jpg" ;
+            color: #fff;
+        }
+
+        header{
+            position:fixed;
+            top:0;
+            left:0;
+            width:100%;
+            padding: 10px 100px;
+            display:flex;
+            justify-content: space-between;
+            align-items:center;
+            z-index:99;
+            backdrop-filter: blur(5px);
+            background: transparent;
+        }
+
+        .navigation a{
+            position:relative;
+            font-size:1.1em;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 40px;
+        }
+
+        .navigation a::after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width:100%;
+            height:3px;
+            background:#ffffff;
+            border-radius: 5px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .5s;
+        }
+    
+        .navigation a:hover::after{
+            transform-origin: left;
+            transform:scaleX(1);
+        }
+    
+        footer {
+            background-color: #373839; 
+            color: #fff; 
+            padding: 20px; 
+            text-align: center;
+        }
+        .iconf {
+            font-size:1em;
+            color:blue;
+        }.icont {
+            font-size:1em;
+            color:rgb(10, 130, 228);
+        }.iconi {
+            font-size:1em;
+            color:rgb(248, 0, 112);
+        }
+        .contact-section {
+            position: relative;
+            text-align: center;
+            color:#333;
+            background-color: white;
+        }
+        
+        .blurred-box {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px); /* Adjust the blur intensity as needed */
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+    
+        .parallax h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            transform: translateY(50%);
+            text-shadow: solid 2px black;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        header h1.blink {
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        .main{
+            background-color: #000000;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #000000;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .container h1 {
+            
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffffff;
+            transition: transform 0.5s;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .container h1:hover {
+            transform: translateY(-5px);
+            color:#000000;
+            background-color: rgb(255, 246, 246);
+        }
+
+        .panel {
+            padding: 18px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #ededed;
+            transition: background-color 0.3s, transform 0.3s;
+            animation: fadeIn 1s ease-in-out;
+            margin-bottom: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .panel1 {
+            padding: 3vh 3vw;
+            font-size: large;
+            color:#ffffff;
+            background-color: #000000;
+            border-radius: 25px;
+            border:none;
+            transition: background-color 0.3s, transform 0.3s;
+            animation: fadeIn 1s ease-in-out;
+            margin-bottom: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .panel:hover {
+            background-color: rgb(217, 215, 215);
+            transform: translateY(-3px);
+        }
+        .panel1:hover {
+            background-color: #ffffff;
+            color:#000000;
+            border-color: #000000;
+            transform: translateY(-3px);
+        }
+
+        
+
+        .panel h2 {
+            color: #162938;
+        }
+
+        ol {
+            padding-left: 20px;
+            color:#0a0909;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
